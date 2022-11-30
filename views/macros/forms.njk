@@ -1,0 +1,21 @@
+{% macro field(name, value = '', type = 'text') %}
+    <div class="field">
+        <input type="{{ type }}" name="{{ name }}"  class="form-control form-control-sm"  value="{{ value | escape }}"/>
+    </div>
+{% endmacro %}
+
+{% macro label(text) %}
+    <div>
+        <label>{{ text }}</label>
+    </div>
+{% endmacro %}
+
+{% macro button(text, link,type,variant) %}
+    <div class="my-3">
+        {% if link %}
+          <a href="{{link}}">{{text}}</a>
+        {% else %}
+         <button class="{{variant}}" type="{{type}}">{{ text }}</button>
+        {% endif %}  
+    </div>
+{% endmacro %}

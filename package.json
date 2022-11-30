@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "nunjacks_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "nodemon start",
+    "serve": "nodemon server.js"
+  },
+  "keywords": [
+    "demonunjacks"
+  ],
+  "author": "Bibhas Ash",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "nunjucks": "^3.2.3"
+  }
+}

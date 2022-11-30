@@ -1,0 +1,44 @@
+{% extends data.layout %}
+{% block content %}
+    {% import "../macros/forms.njk" as forms %}
+
+    <div class="container">
+        <div class="row d-flex flex-col align-items-center">
+            <h3 class="text-center">Upload CSV File</h3>
+            <div class="col-lg-6 col-12 col-sm-6 col-md-12 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="upload_form" enctype="multipart/form-data">
+                            <div class="form-group my-2">
+                                <label for="csv_file_input" id="csv_file_input_label" class="w-100 text-center py-5">Select CSV/Excel File</label>
+                                <input type="file" name="file" class="form-control form-control-file" id="csv_file_input">
+                                {# accept="text/csv,.xls,.xlsx" #}
+                            </div>
+                            <div class="form-group">
+                                <div class="progress my-2" id="progress-bar">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" id="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="text-center">
+                                    <small id="msg" style="font-weight:500"></small>
+                                </p>
+                                <button type="submit" id="uploadBtn" disabled="true" class="btn btn-primary w-100">
+                                    {# <span class="spinner-border spinner-border-sm"></span> Loading.. #}
+                                    Upload
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="card-footer" style="background-color:white">
+                            <p class="py-0 px-0" style="font-size:14px">
+                                <b class="ml-2">Note :</b>
+                                <span>Supported file formats are .csv, .xls, .xlsx.</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

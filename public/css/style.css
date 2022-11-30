@@ -1,0 +1,11 @@
+#csv_file_input{
+    display: none;
+}
+#csv_file_input_label {
+   border: 2px solid #ddd;
+   border-style: dashed;
+   border-radius: 10px;
+   background-color: #eee;
+   font-weight: bold;
+   color: rgb(122, 122, 122);
+}
